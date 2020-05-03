@@ -1,0 +1,72 @@
+customEnchantChance: 20
+enchants:
+  ID1:
+    name: Wither
+    chanceToOccur: 20
+    chanceToGet: 20
+    duration: 5
+  ID2:
+    name: Viper
+    chanceToOccur: 20
+    chanceToGet: 20
+    duration: 5
+  ID3:
+    name: Concrete
+    chanceToOccur: 20
+    chanceToGet: 20
+    duration: 5
+  ID4:
+    name: Dizzying
+    chanceToOccur: 20
+    chanceToGet: 20
+    duration: 5
+  ID5:
+    name: Greed
+    chanceToOccur: 20
+    chanceToGet: 20
+  ID6:
+    name: Moon Crest
+    chanceToOccur: 20
+    chanceToGet: 20
+  ID7:
+    name: Sun Crest
+    chanceToOccur: 20
+    chanceToGet: 20
+  ID8:
+    name: Vampiric
+    chanceToOccur: 20
+    chanceToGet: 20
+  ID9:
+    name: "Death's Rose"
+    chanceToOccur: 1
+    chanceToGet: 5
+  ID10:
+    name: Brothers Guard
+    chanceToGet: 20
+  ID11:
+    name: MarshMallow
+    chanceToGet: 20
+  ID12:
+    name: Springs
+    chanceToGet: 20
+  ID13:
+    name: Terraria
+    chanceToGet: 20
+  ID14:
+    name: Torched
+    chanceToGet: 20
+  ID15:
+    name: Halo
+    chanceToGet: 20
+  ID16:
+    name: Gluttony
+    chanceToGet: 20
+  ID17:
+    name: True Strength
+    chanceToGet: 20
+  ID18:
+    name: Hellfire
+    chanceToGet: 20
+  ID19:
+    name: "God's Disciple"
+    chanceToGet: 20

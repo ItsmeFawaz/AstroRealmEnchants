@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="AstroRealmEnchants:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AstroRealmEnchants_jar</output-path>
+    <root id="archive" name="AstroRealmEnchants.jar">
+      <element id="module-output" name="AstroRealmEnchants" />
+    </root>
+  </artifact>
+</component>

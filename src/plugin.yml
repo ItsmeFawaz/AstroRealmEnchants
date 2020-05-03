@@ -1,0 +1,14 @@
+name: AstroRealmEnchants
+main: me.bottleofglass.astrorealmenchants.Main
+author: Faw
+depends: [mcMMO]
+version: 1.0.0
+commands:
+  ce:
+    usage: /ce
+    description: A command that opens the GUI that showcases all the custom enchants
+  ae:
+    usage: "§e/ae {enchantment name/id}"
+    description: A command to manually put certain custom enchant on items
+    permission: astroenchant.admin
+    permission-message: "§cYou need the permission node astroenchant.admin to use this command"
