@@ -70,3 +70,21 @@ enchants:
   ID19:
     name: "God's Disciple"
     chanceToGet: 20
+  ID20:
+    name: "Starving"
+    chanceToGet: 20
+    chanceToOccur: 20
+    duration: 5
+  ID21:
+    name: "Hunger Hunter"
+    chanceToGet: 20
+    chanceToOccur: 20
+  ID22:
+    name: "Submarine"
+    chanceToGet: 20
+  ID23:
+    name: "Obsidian Breaker"
+    chanceToGet: 20
+  ID24:
+    name: "Sponge Breaker"
+    chanceToGet: 20

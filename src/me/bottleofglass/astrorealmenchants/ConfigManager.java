@@ -22,6 +22,11 @@ public class ConfigManager {
     private final ConfigurationSection ID17;
     private final ConfigurationSection ID18;
     private final ConfigurationSection ID19;
+    private final ConfigurationSection ID20;
+    private final ConfigurationSection ID21;
+    private final ConfigurationSection ID22;
+    private final ConfigurationSection ID23;
+    private final ConfigurationSection ID24;
     public ConfigManager(Main main) {
         ID1 = main.getConfig().getConfigurationSection("enchants.ID1");
         ID2 = main.getConfig().getConfigurationSection("enchants.ID2");
@@ -42,6 +47,11 @@ public class ConfigManager {
         ID17 = main.getConfig().getConfigurationSection("enchants.ID17");
         ID18 = main.getConfig().getConfigurationSection("enchants.ID18");
         ID19 = main.getConfig().getConfigurationSection("enchants.ID19");
+        ID20 = main.getConfig().getConfigurationSection("enchants.ID20");
+        ID21 = main.getConfig().getConfigurationSection("enchants.ID21");
+        ID22 = main.getConfig().getConfigurationSection("enchants.ID22");
+        ID23 = main.getConfig().getConfigurationSection("enchants.ID23");
+        ID24 = main.getConfig().getConfigurationSection("enchants.ID24");
     }
     public ConfigurationSection getID1() {
         return ID1;
@@ -117,5 +127,25 @@ public class ConfigManager {
 
     public ConfigurationSection getID19() {
         return ID19;
+    }
+
+    public ConfigurationSection getID20() {
+        return ID20;
+    }
+
+    public ConfigurationSection getID21() {
+        return ID21;
+    }
+
+    public ConfigurationSection getID22() {
+        return ID22;
+    }
+
+    public ConfigurationSection getID23() {
+        return ID23;
+    }
+
+    public ConfigurationSection getID24() {
+        return ID24;
     }
 }

@@ -76,12 +76,12 @@ public class EntityListener implements Listener {
                         break;
                     case 5:
                         if (!isDay(damager.getWorld())) {
-                            evt.setDamage(evt.getDamage() * 1.5);
+                            evt.setDamage(evt.getDamage() * 1.133D);
                         }
                         break;
                     case 6:
                         if (isDay(damager.getWorld())) {
-                            evt.setDamage(evt.getDamage() * 1.5);
+                            evt.setDamage(evt.getDamage() * 1.133D);
                         }
                         break;
                     case 7:
@@ -96,6 +96,18 @@ public class EntityListener implements Listener {
                             damaged.sendMessage(ChatColor.RED + "You just got one shot by " + damager.getName()+ " using Death's Rose!");
                             damager.sendMessage(ChatColor.RED + "You got lucky and killed your opponent with one hit!");
                             damager.playSound(damager.getLocation(), Sound.FIZZ, 50, 30);
+                        }
+                        break;
+                    case 19:
+                        if (random.nextInt(100) < configManager.getID20().getDouble("chanceToOccur")) {
+                            new PotionEffect(PotionEffectType.HUNGER, configManager.getID4().getInt("duration")*20, 0).apply((LivingEntity) evt.getEntity());
+                            damager.playSound(damager.getLocation(), Sound.ORB_PICKUP, 50, 30);
+                        }
+                        break;
+                    case 20:
+                        if (random.nextInt(100) < configManager.getID20().getDouble("chanceToOccur")) {
+                            damager.setFoodLevel(damager.getFoodLevel() + (int)Math.floor(evt.getFinalDamage()/4));
+                            damager.playSound(damager.getLocation(), Sound.ORB_PICKUP, 50, 30);
                         }
                         break;
                     default:
@@ -115,7 +127,7 @@ public class EntityListener implements Listener {
                         halo = true;
                     }
                 }
-                evt.setDamage(evt.getDamage() * (1-marshmallowCount*0.05D));
+                evt.setDamage(evt.getDamage() * (1-marshmallowCount*0.09D));
                 if(halo && evt.getFinalDamage() >= damaged.getHealth()) {
                     damaged.setHealth(damaged.getMaxHealth());
                     damaged.playSound(damaged.getLocation(), Sound.ITEM_BREAK, 50, 50);
@@ -139,6 +151,13 @@ public class EntityListener implements Listener {
                 Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
                     CustomEnchant.updateEffects(evt.getPlayer());
                 });
+            }
+        } else if(evt.getAction() == Action.LEFT_CLICK_BLOCK) {
+            CustomEnchant ench = CustomEnchant.getEnchant(evt.getItem());
+            if(ench == CustomEnchant.ID23 && evt.getClickedBlock().getType() == Material.OBSIDIAN) {
+                evt.getClickedBlock().breakNaturally();
+            } else if(ench == CustomEnchant.ID24 && evt.getClickedBlock().getType() == Material.SPONGE) {
+                evt.getClickedBlock().breakNaturally();
             }
         }
     }

@@ -34,7 +34,12 @@ public enum CustomEnchant {
     ID16(ChatColor.translateAlternateColorCodes('&',Main.getInstance().getConfigManager().getID16().getString("name")),"HELMET"),
     ID17(ChatColor.translateAlternateColorCodes('&',Main.getInstance().getConfigManager().getID17().getString("name")),"CHESTPLATE"),
     ID18(ChatColor.translateAlternateColorCodes('&',Main.getInstance().getConfigManager().getID18().getString("name")),"LEGGINGS"),
-    ID19(ChatColor.translateAlternateColorCodes('&',Main.getInstance().getConfigManager().getID19().getString("name")), "ARMOR");
+    ID19(ChatColor.translateAlternateColorCodes('&',Main.getInstance().getConfigManager().getID19().getString("name")), "ARMOR"),
+    ID20(ChatColor.translateAlternateColorCodes('&',Main.getInstance().getConfigManager().getID20().getString("name")), "SWORD"),
+    ID21(ChatColor.translateAlternateColorCodes('&',Main.getInstance().getConfigManager().getID21().getString("name")), "SWORD"),
+    ID22(ChatColor.translateAlternateColorCodes('&',Main.getInstance().getConfigManager().getID22().getString("name")), "HELMET"),
+    ID23(ChatColor.translateAlternateColorCodes('&',Main.getInstance().getConfigManager().getID23().getString("name")), "PICKAXE"),
+    ID24(ChatColor.translateAlternateColorCodes('&',Main.getInstance().getConfigManager().getID24().getString("name")), "PICKAXE");
     private final String name;
     private final String equipment;
     CustomEnchant(String name, String equipment) {
@@ -87,6 +92,8 @@ public enum CustomEnchant {
                 toAdd.add(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Integer.MAX_VALUE, 0));
             } else if(ench == CustomEnchant.ID19) {
                 godsdiscipleCount++;
+            } else if(ench == CustomEnchant.ID22) {
+                toAdd.add(new PotionEffect(PotionEffectType.WATER_BREATHING, Integer.MAX_VALUE, 0));
             }
         }
         if(brothersGuardCount >= 4) {

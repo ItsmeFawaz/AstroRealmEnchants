@@ -16,7 +16,6 @@ import java.util.Random;
 public class EnchantListener implements Listener {
     private final Random random = new Random();
     private final ConfigManager configManager;
-    //TODO add custom enchants
 
     public EnchantListener(ConfigManager configManager) {
         this.configManager = configManager;
